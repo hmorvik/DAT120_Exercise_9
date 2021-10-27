@@ -43,3 +43,6 @@ if __name__ == '__main__':
         print('\t\t\tTotal poengsum: '+str(points2))
         print('\n\n')
     
+    print('\nQuizen er ferdig. Poengsummen ble:\n')
+    print('Spiller 1:\t'+str(points1))
+    print('Spiller 2:\t'+str(points2))
