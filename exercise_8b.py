@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Oct 27 19:48:51 2021
+Created on Wed Oct 27 21:53:45 2021
 
 @author: havar
 """
@@ -15,15 +15,18 @@ class MultipleChoice:
         str_text_block = 'Q:\t'+self.question+'\n'
         for n in range(len(self.answer_list)):
             if n == 0:
-                str_text_block += 'A:\t'+str((n+1))+')\t'+self.answer_list[n]+'\n'
+                str_text_block += 'A:\t'+str((n))+')\t'+self.answer_list[n]+'\n'
             else:
-                str_text_block += '\t'+str((n+1))+')\t'+self.answer_list[n]+'\n'
+                str_text_block += '\t'+str((n))+')\t'+self.answer_list[n]+'\n'
         return str_text_block
 
     def sjekk_svar(self, chosen_answer):
-        if self.correct_answer == chosen_answer:
-            return 'Svaret er riktig'
+        if self.correct_answer == str(chosen_answer):
+            return 'Korrekt'
         else:
-            return 'Svaret er galt'
+            return 'Galt'
         
-        
+    def korrekt_svar_tekst(self):
+        return self.answer_list[int(self.correct_answer)]
+    
+    
